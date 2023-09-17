@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    color: #263138;
+}
+
 /* Cabeçalho */
 header {
     background-color: #FF9A6C;
@@ -12,10 +16,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 24px 80px 24px 80px;
-}
-
-header a img {
-    fill: #FFFFFF;
 }
 
 header nav a {
@@ -115,6 +115,7 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     padding: 24px;
+    margin-bottom: -50px; ///* distancia */
 }
 
 .duvida img {
@@ -129,7 +130,19 @@ h2 {
     border-left: 1px solid #FF725E;
     border-radius: 0 0 8px 8px;
     margin-top: -8px;
-    padding: 24px;
+    /* Eventos JS... */
+    padding: 10px 24px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.duvida.ativa .paragrafo {
+    opacity: 1;
+    height: fit-content;
+    overflow: 24px;
+    padding: 60px 24px 10px 24px;
 }
 
 /* Seções - Rodapé ( Conteúdos ) */
