@@ -9,8 +9,8 @@ body {
     color: #263138;
 }
 
-/* Cabeçalho */
-header {
+/* Cabeçalho - Menu */
+.menu {
     background-color: #FF9A6C;
     display: flex;
     align-items: center;
@@ -18,19 +18,33 @@ header {
     padding: 24px 80px 24px 80px;
 }
 
-header nav a {
+.menu nav a {
     color: #FFFFFF;
     font-weight: 600;
     padding: 32px;
     text-decoration: none;
 }
 
+/* Fixar Menu - topo */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: #fff; */ /* Defina a cor de fundo desejada */
+    /* Outros estilos, como altura, preenchimento, sombra, etc., se necessário */
+    z-index: 100; /* Isso coloca o header acima de outros elementos */
+} 
+
+  
+
 /* Seções - Banner Início ( Conteúdos ) */
 #inicio {
     display: flex;
     align-items: center;
     gap: 32px;
-    padding: 24px 80px 24px 80px;
+    padding: 80px 80px 24px 80px;
     position: relative;
 }
 
@@ -75,7 +89,15 @@ h2 {
     display: flex;
     align-items: center;
     gap: 64px;
-    padding: 64px 80px;
+    padding: 90px 80px;
+}
+
+#clinica .paragrafo {
+    margin-bottom: 16px;
+}
+
+#clinica ul {
+    margin-bottom: 44px;
 }
 
 #clinica li {
@@ -85,7 +107,7 @@ h2 {
 
 /* Seções - Farmácia ( Conteúdos ) */
 #farmacia {
-    padding: 64px 80px;
+    padding: 94px 80px;
     text-align: center;
 }
 
@@ -103,7 +125,7 @@ h2 {
     display: flex;
     align-items: center;
     gap: 64px;
-    padding: 64px 80px;
+    padding: 80px 80px;
 }
 
 .duvida {
@@ -115,7 +137,7 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     padding: 24px;
-    margin-bottom: -50px; ///* distancia */
+    margin-bottom: -50px; /* distancia */
 }
 
 .duvida img {
@@ -188,4 +210,6 @@ footer p a {
 
 #copyright a {
     color: #FF9A6C;
+    text-decoration: none;
+    padding: 3px;
 }
