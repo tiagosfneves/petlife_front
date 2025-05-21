@@ -1,0 +1,215 @@
+/* reset de browser */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #263138;
+}
+
+/* Cabeçalho - Menu */
+.menu {
+    background-color: #FF9A6C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 80px 24px 80px;
+}
+
+.menu nav a {
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+}
+
+/* Fixar Menu - topo */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: #fff; */ /* Defina a cor de fundo desejada */
+    /* Outros estilos, como altura, preenchimento, sombra, etc., se necessário */
+    z-index: 100; /* Isso coloca o header acima de outros elementos */
+} 
+
+  
+
+/* Seções - Banner Início ( Conteúdos ) */
+#inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 80px 80px 24px 80px;
+    position: relative;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.paragrafo {
+    line-height: 150%;
+    margin-bottom: 64px;
+}
+
+.botao {
+    background-color: #FF9A6C;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    text-decoration: none;
+}
+
+.botao-transparente {
+    background-color: transparent;
+    color: #FF725E;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+}
+
+.absolute {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+/* Seções - Clinica ( Conteúdos ) */
+
+#clinica {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 90px 80px;
+}
+
+#clinica .paragrafo {
+    margin-bottom: 16px;
+}
+
+#clinica ul {
+    margin-bottom: 44px;
+}
+
+#clinica li {
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+/* Seções - Farmácia ( Conteúdos ) */
+#farmacia {
+    padding: 94px 80px;
+    text-align: center;
+}
+
+#farmacia img {
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Seções - Dúvidas ( Conteúdos ) */
+#duvidas {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 80px 80px;
+}
+
+.duvida {
+    position: relative;
+}
+
+.duvida h3 {
+    border: 2px solid #FF725E;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+    margin-bottom: -50px; /* distancia */
+}
+
+.duvida img {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo {
+    border-right: 1px solid #FF725E;
+    border-bottom: 1px solid #FF725E;
+    border-left: 1px solid #FF725E;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    /* Eventos JS... */
+    padding: 10px 24px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.duvida.ativa .paragrafo {
+    opacity: 1;
+    height: fit-content;
+    overflow: 24px;
+    padding: 60px 24px 10px 24px;
+}
+
+/* Seções - Rodapé ( Conteúdos ) */
+footer {
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .titulo {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a {
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+
+}
+
+footer p {
+    margin-bottom: 16px;
+    max-width: 350px;
+}
+
+footer p a {
+    color: #FE503A;
+    text-decoration: none;
+}
+
+#copyright {
+    background-color: #263138;
+    color: #FFFFFF;
+    padding: 24px;
+    text-align: center;
+}
+
+#copyright a {
+    color: #FF9A6C;
+    text-decoration: none;
+    padding: 3px;
+}
