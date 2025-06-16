@@ -5,161 +5,181 @@
     <meta charset="UTF-8">
     <title>PetLife</title>
     <meta name="description" content="Cuidados para dar uma vida longa para seu pet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="./css/main.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./icon-petlife.svg" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
-    <header class="menu">
-        <a href="index.js">
-            <img src="./img/logo-white.svg" alt="logo PetLife">
-        </a>
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#clinica">Clínica</a>
-            <a href="#farmacia">Farmácia</a>
-            <a href="#duvidas">Dúvidas</a>
-        </nav>
-    </header>
+    <body>
+        <header class="menu">
+            <a href="index.html">
+                <img src="./img/logo-white.svg" alt="logo PetLife">
+            </a>
 
-    <main>
-        <section id="inicio">
-            <img src="./img/start-img.svg" alt="Uma humana com seu pet" width="580" height="580">
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-            <div>
-                <h1>Cuidados para dar uma vida longa para seu pet</h1>
-                <p class="paragrafo">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
-                <a class="botao" href="https://wa.me/55995850201" target="_blank">Marque uma consulta</a>
-                <a class="botao-transparente" href="#clinica">Conheça nossa clínica</a>
-            </div>
-
-            <img class="absolute" src="./img/shape.svg" alt="banner decorativo">
-            
-        </section>
-
-        <section id="clinica">
-            <div>
-                <h2>Cuidado veterinário de qualidade</h2>
-                <p class="paragrafo">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
+            <nav id="nav-menu">
                 <ul>
-                    <li>Consultas e exames de rotina</li>
-                    <li>Vacinação e imunização</li>
-                    <li>Cirurgias e procedimentos veterianários</li>
-                    <li>Tratamentos e controles de doenças</li>
-                    <li>Odontologia veterinária</li>
-                    <li>Atendimento de emergência 24 horas</li>
-                    <li>Nutrição e aconselhamento alimentar personalizado</li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#clinica">Clínica</a></li>
+                    <li><a href="#farmacia">Farmácia</a></li>
+                    <li><a href="#duvidas">Dúvidas</a></li>
                 </ul>
-                <a class="botao" href="https://wa.me/55995850201" target="_blank">Agendar Consulta</a>
-                <a class="botao-transparente" href="https://maps.app.goo.gl/zoBAko4uQZyCV7X19" target="_blank">Como Chegar?</a>
-            </div>
-
-            <img src="./img/clinic-img.svg" alt="veterinária cuidando de um pet" width="480" height="480" loading="lazy">
-        </section>
-
-        <section id="farmacia">
-            <div>
-                <h2>Venha conferir nosso petshop e farmácia</h2>
-                <img src="./img/shop-img.svg" alt="imagem de humana com seu pet" width="645" height="430" loading="lazy">
-                <p class="paragrafo">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                </p>
-            </div>
-        </section>
-
-        <section id="duvidas">
-            <img src="./img/faq-img.svg" alt="imagem de humana com seu pet" width="540" height="540" loading="lazy">
-            <div>
-                <h2>Ficou alguma dúvida?</h2>
-
-                <div class="duvida">
-                    <h3>Quais serviços são oferecidos pela clínica PetLife?</h3>
-                    <img src="./img/arrow-down.svg" alt="imagem de check">
-                    <p class="paragrafo">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
-                    </p>
-                </div>
-
-                <div class="duvida">
-                    <h3>Quais espécies de animais a clínica atende?</h3>
-                    <img src="./img/arrow-down.svg" alt="imagem de check">
-                    <p class="paragrafo">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
-                    </p>
-                </div>
-
-                <div class="duvida">
-                    <h3>A clínica possui serviço de emergência?</h3>
-                    <img src="./img/arrow-down.svg" alt="imagem de check">
-                    <p class="paragrafo">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
-                    </p>
-                </div>
-
-                <div class="duvida">
-                    <h3>A clínica oferece serviços de banho e tosa?</h3>
-                    <img src="./img/arrow-down.svg" alt="imagem de check">
-                    <p class="paragrafo">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div>
-            <img src="./img/logo.svg" alt="logo petlife">
-            <p>Aqui a vida do seu pet é mais feliz!</p>
-        </div>
-        
-        <div>
-            <strong class="titulo">Links rápidos</strong>
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#clinica">Clínica</a>
-                <a href="#farmacia">Farmácia</a>
-                <a href="#duvidas">Dúvidas</a>
             </nav>
-        </div>
-        
-        <div>
-            <strong class="titulo">Encontre-nos</strong>
-            <p>WhatsApp: <a href="http://wa.me/552244445555" target="_blank">(22) 4444-5555</a></p>
-            <p>Email: <a href="mailto:petlife@petlife.com">petlife@petlife.com</a></p>
-            <p>Endereço: Rua dos Pets, 1 - Centro - Petlândia</p>
-        </div>
-    </footer>
+        </header>
 
-    <div id="copyright">
-        Desenvolvido por &copy;tiagosfneves 2023 • 
-        <a href="http://github.com/tiagosfneves" target="_blank">Github</a>  
-        <a href="http://linkedin.com/in/tiagosfneves" target="_blank">LinkedIn</a> 
-    </div>
+        <main id="container-principal">
+            
+            <section id="inicio">
+                <img class="img-secoes" src="./img/start-img.svg" alt="Uma humana com seu pet">
 
-    <script src="./js/main.js"></script>
-</body>
+                <div>
+                    <h1>Cuidamos de quem Cuida de Você!</h1>
+                    <p class="paragrafo">
+                        Aqui na PetLife, entendemos que seu pet é parte da sua família e nossa missão é oferecer os melhores serviços e produtos para garantir que ele tenha uma vida longa, saudável e feliz ao seu lado. Aqui, cada lambida ou miado é valorizado, e trabalhamos com dedicação e carinho para cuidar do bem-estar do seu pet. <br><br>
+                        Nossa equipe é formada por profissionais apaixonados por animais e altamente qualificados, prontos para oferecer um atendimento acolhedor e seguro. Seja para um banho relaxante, uma tosa especial ou acompanhamento veterinário, você encontrará tudo o que precisa aqui. Venha nos conhecer!
+                    </p>
+                    <a class="botao" href="https://wa.me/551146194328" target="_blank">Marque uma consulta</a>
+                    <a class="botao-transparente" href="#clinica">Conheça nossa clínica</a>
+                </div>
+            </section>
+
+            <section id="clinica">
+                <div>
+                    <h2>Clínica Veterinária Especializada</h2>
+                    <p class="paragrafo">
+                        Sabemos a importância de cada momento que você compartilha com seu pet. Por isso, nossa equipe de profissionais se dedica a cada consulta e procedimento, com a sensibilidade e o carinho que seu pet merece. Queremos que você se sinta seguro e tranquilo, sabendo que seu amigo está recebendo o melhor, não apenas em termos de tratamento, mas também em atenção e acolhimento.
+                    </p>
+                    <ul>
+                        <li>Consultas e exames de rotina</li>
+                        <li>Vacinação e imunização</li>
+                        <li>Cirurgias e procedimentos veterianários</li>
+                        <li>Tratamentos e controles de doenças</li>
+                        <li>Odontologia veterinária</li>
+                        <li>Atendimento de emergência 24 horas</li>
+                        <li>Nutrição e aconselhamento alimentar personalizado</li>
+                    </ul>
+                    <a class="botao" href="https://wa.me/551146194328" target="_blank">Agendar Consulta</a>
+                    <a class="botao-transparente" href="https://maps.app.goo.gl/zoBAko4uQZyCV7X19" target="_blank">Como
+                        Chegar?</a>
+                </div>
+
+                <img class="img-secoes" src="./img/clinic-img.svg" alt="veterinária cuidando de um pet" loading="lazy">
+            </section>
+
+            <section id="farmacia">
+                
+                <h2>Venha conhecer nosso Petshop e Farmácia</h2>
+
+                <div>
+                    <img class="img-secoes" src="./img/shop-img.svg" alt="imagem de humana com seu pet" loading="lazy">
+                                        
+                    <p class="paragrafo">
+                        Na PetLife, a saúde do seu amiguinho é levada a sério, com o cuidado e a atenção que ele merece. Nossa farmácia prioriza produtos naturais e organicos que ajudam na recuperação e bem-estar do seu pet. Sabemos que cada remédio, cada suplemento, é um passo em direção a mais qualidade de vida e momentos felizes ao seu lado. <br><br>
+                        Aqui, você será acolhido(a) por profissionais que entendem suas preocupações e estão prontos para oferecer orientação clara e objetiva. Acreditamos que a saúde do seu pet começa com informação e produtos de qualidade, por isso, nossa seleção é feita com rigor, pensando sempre no que é mais eficaz e seguro. Conte conosco para ajudar a garantir que seu pet tenha uma vida longa, saudável e cheia de alegria!
+                    </p>
+                </div>
+                
+            </section>
+
+            <section id="duvidas">
+                <img class="img-secoes" src="./img/faq-img.svg" alt="imagem de humana com seu pet" loading="lazy">
+                <div>
+                    <h2>Ficou alguma dúvida?</h2>
+
+                    <div class="duvida">
+                        <div class="caixa-pergunta">
+                            <h3>Quais serviços são oferecidos pela clínica PetLife?</h3>
+                            <img class="check" src="./img/arrow-down.svg" alt="imagem de check">
+                        </div>
+                        <p class="paragrafo">
+                            A PetLife oferece uma gama completa de serviços para garantir a saúde e o bem-estar do seu pet, com Serviços Veterinários, Estética e Bem-Estar, Farmácia e Petshop. Para mais informações sobre os serviços acesse a seção <a class="link-transparente" href="#clinica">Clínica.</a>
+                        </p>
+                    </div>
+
+                    <div class="duvida">
+                        <div class="caixa-pergunta">
+                            <h3>Quais espécies de animais a clínica atende?</h3>
+                            <img class="check" src="./img/arrow-down.svg" alt="imagem de check">
+                        </div>
+                        <p class="paragrafo">
+                            A PetLife tem uma estrutura premium para atender e tratar os mais diversos tipos de animais domésticos, desde Caes e Gatos até animais mais incomuns e exoticos, como Coelhos, Peixes, Aves, Tartarugas, Roedores, Furões, Repteis etc. <br><br>
+                            Ainda ficou com dúvida? Chame um dos nossos especialistas para tirar suas dúvidas, <a class="link-transparente" href="https://wa.me/551146194328" target="_blank">aqui!</a>
+                        </p>
+                    </div>
+
+                    <div class="duvida">
+                        <div class="caixa-pergunta">
+                            <h3>A clínica possui serviço de emergência?</h3>
+                            <img class="check" src="./img/arrow-down.svg" alt="imagem de check">
+                        </div>
+                        <p class="paragrafo">
+                            Sim, a PetLife oferece atendimento de emergência 24 horas, garantindo suporte rápido e eficiente nos momentos mais críticos para seu pet. <br><br>
+                            Venha conhecer a PetLife. Encontre a rota mais fácil, <a class="link-transparente" href="https://maps.app.goo.gl/zoBAko4uQZyCV7X19" target="_blank"> aqui.</a>
+                        </p>
+                    </div>
+
+                    <div class="duvida">
+                        <div class="caixa-pergunta">
+                            <h3 class="item1">A clínica oferece serviços de banho e tosa?</h3>
+                            <img class="item2" src="./img/arrow-down.svg" alt="imagem de check">
+                        </div>
+                        <p class="paragrafo">
+                            Sim, a PetLife oferece serviços de banho relaxante e tosa especial, buscando o conforto e a estética do seu animal de estimação. <br><br>
+                            Aproveite a oportunidade, <b>os novos clientes recebem 10% de cashback,</b> além de <b><i>transporte gratuito.</i></b> Agende agora mesmo o banho e tosa do seu pet, <a class="link-transparente" href="https://wa.me/551146194328" target="_blank">aqui!</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="rodape">
+            <div>
+                <a href="index.html">
+                    <img class="logo" src="./img/logo.svg" alt="logo petlife">
+                </a>
+                <p>Aqui a vida do seu pet é mais feliz!</p>
+            </div>
+
+            <div>
+                <strong class="titulo">Links rápidos</strong>
+                <nav>
+                    <a href="#inicio">Início</a>
+                    <a href="#clinica">Clínica</a>
+                    <a href="#farmacia">Farmácia</a>
+                    <a href="#duvidas">Dúvidas</a>
+                </nav>
+            </div>
+
+            <div>
+                <strong class="titulo">Encontre-nos</strong>
+                <p>WhatsApp: <a href="http://wa.me/551146194328" target="_blank">(11) 4619-4328</a></p>
+                <p>Email: <a href="mailto:petlife@petlife.com">petlife@petlife.com</a></p>
+                <p>Endereço: <br>Rua dos Pets, 1 - Centro - Petlândia</p>
+            </div>
+        </footer>
+
+        <div id="copyright">
+            <strong>Desenvolvido por &copy;tiagosfneves 2023</strong>
+            <div>•</div>
+            <nav>
+                <a href="http://github.com/tiagosfneves" target="_blank">Github</a>
+                <a href="http://linkedin.com/in/tiagosfneves" target="_blank">LinkedIn</a>
+            </nav>
+
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
 
 </html>

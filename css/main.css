@@ -3,49 +3,128 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: blue solid 1px; */
 }
 
 body {
     color: #263138;
+    padding-top: 70px; /* Espaço após o menu fixo */
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+
 }
 
 /* Cabeçalho - Menu */
 .menu {
-    background-color: #FF9A6C;
+    background-color: #ff9b6c;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 80px 24px 80px;
+    padding: 24px 80px ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilos do menu hamburguer */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-hamburguer .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos quando o menu está ativo */
+.menu-hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menu de navegação */
+.menu nav {
+    display: flex;
+}
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
 }
 
 .menu nav a {
     color: #FFFFFF;
     font-weight: 600;
-    padding: 32px;
+    padding: 0;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* Fixar Menu - topo */
+.menu nav a:hover {
+    color: #fc3b21;
+}
 
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* background-color: #fff; */ /* Defina a cor de fundo desejada */
-    /* Outros estilos, como altura, preenchimento, sombra, etc., se necessário */
-    z-index: 100; /* Isso coloca o header acima de outros elementos */
-} 
+/* Configurações gerais - Container MAIN */
+#container-principal {
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto;
+}
 
-  
-
-/* Seções - Banner Início ( Conteúdos ) */
+/* Seção - Início ( Conteúdos ) */
 #inicio {
+    min-height: 100vh; /* ocupa no minimo 100% da altura da viewport */
     display: flex;
     align-items: center;
     gap: 32px;
-    padding: 80px 80px 24px 80px;
+    padding: 80px;
     position: relative;
+    /* overflow: hidden; */    /* evita que a imagem ultrapasse */
+}
+
+/* Adiciona a imagem decorativa como pseudo-elemento */
+#inicio::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 300px; /* ajuste conforme o tamanho da sua imagem */
+    background-image: url('../img/shape.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    z-index: -10;
+}
+
+/* Configurações gerais das imagens das seções */
+.img-secoes {
+    width: 100%;
+    max-width: 600px;
 }
 
 h1,
@@ -66,6 +145,9 @@ h2 {
     color: #FFFFFF;
     padding: 16px 32px;
     text-decoration: none;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;
 }
 
 .botao-transparente {
@@ -73,23 +155,31 @@ h2 {
     color: #FF725E;
     padding: 16px 32px;
     text-underline-offset: 4px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.link-transparente {
+    background-color: transparent;
+    color: #FF725E;
+    text-underline-offset: 4px;
 }
 
-.absolute {
+/* .absolute {
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%); */ /* centralizar de forma absoluta e neutra. */
+/*     width: 100vw;
     z-index: -10;
-}
+} */
 
 /* Seções - Clinica ( Conteúdos ) */
-
 #clinica {
+    min-height: 100vh; /* ocupa no minimo 100% da altura da viewport */
     display: flex;
     align-items: center;
-    gap: 64px;
-    padding: 90px 80px;
+    gap: 32px;
+    padding: 80px;
 }
 
 #clinica .paragrafo {
@@ -107,12 +197,16 @@ h2 {
 
 /* Seções - Farmácia ( Conteúdos ) */
 #farmacia {
+    min-height: 100vh; /* ocupa no minimo 100% da altura da viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 94px 80px;
     text-align: center;
 }
 
 #farmacia img {
-    margin: 64px auto;
+    margin: 64px;
 }
 
 #farmacia .paragrafo {
@@ -122,6 +216,7 @@ h2 {
 
 /* Seções - Dúvidas ( Conteúdos ) */
 #duvidas {
+    min-height: 100vh; /* ocupa no minimo 100% da altura da viewport */
     display: flex;
     align-items: center;
     gap: 64px;
@@ -137,7 +232,7 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     padding: 24px;
-    margin-bottom: -50px; /* distancia */
+    margin-bottom: -50px;
 }
 
 .duvida img {
@@ -152,7 +247,6 @@ h2 {
     border-left: 1px solid #FF725E;
     border-radius: 0 0 8px 8px;
     margin-top: -8px;
-    /* Eventos JS... */
     padding: 10px 24px;
     opacity: 0;
     height: 0;
@@ -163,7 +257,6 @@ h2 {
 .duvida.ativa .paragrafo {
     opacity: 1;
     height: fit-content;
-    overflow: 24px;
     padding: 60px 24px 10px 24px;
 }
 
@@ -172,23 +265,19 @@ footer {
     background-color: rgba(255, 152, 108, 0.25);
     display: flex;
     justify-content: space-between;
-    gap: 80px;
+
     padding: 64px 80px;
 }
 
-footer img,
 footer .titulo {
-    display: block;
     font-weight: 600;
-    margin-bottom: 24px;
 }
 
-footer nav a {
+footer nav a, p {
     color: #263138;
     display: block;
-    margin-bottom: 16px;
+    margin-top: 16px;
     text-decoration: none;
-
 }
 
 footer p {
@@ -204,12 +293,106 @@ footer p a {
 #copyright {
     background-color: #263138;
     color: #FFFFFF;
+    gap: 20px;
     padding: 24px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #copyright a {
     color: #FF9A6C;
     text-decoration: none;
-    padding: 3px;
+    padding-right: 10px;
+
+}
+
+/* Responsividade */
+@media (max-width: 1070px) {
+    .menu {
+        padding: 24px 20px;
+    }
+    
+    .menu-hamburguer {
+        display: flex;
+    }
+    
+    .menu nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #FF9A6C;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+    
+    .menu nav.active {
+        left: 0;
+    }
+    
+    .menu nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu nav a {
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+
+    #inicio {
+        flex-direction: column;
+        padding: 40px 20px 24px 20px;
+    }
+
+    #clinica {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    #farmacia {
+        padding: 40px 20px;
+    }
+
+    #duvidas {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px 20px;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    h1,
+    h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .paragrafo {
+        margin-bottom: 40px;
+    }    
+
+    .botao,
+    .botao-transparente {
+        padding: 10px 20px;        
+    }
+
+   #farmacia .img-secoes {
+       width: 430px;
+    }
+
+    #copyright {
+        flex-direction: column;
+    }
 }
